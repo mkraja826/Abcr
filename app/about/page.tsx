@@ -6,6 +6,12 @@ import { company, leadership } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "About | ABCR Infra Projects",
   description: "Learn about ABCR Infra Projects Pvt. Ltd., its mission, vision and leadership.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    url: "/about",
+    title: "About ABCR Infra Projects",
+    description: "Learn about ABCR Infra Projects Pvt. Ltd., its mission, vision and leadership.",
+  },
 };
 
 export default function AboutPage() {
