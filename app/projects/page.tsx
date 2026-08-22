@@ -6,6 +6,12 @@ import { projects } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Projects | ABCR Infra Projects",
   description: "Selected ABCR railway, SCADA, pipeline and infrastructure projects across India.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    url: "/projects",
+    title: "Projects | ABCR Infra Projects",
+    description: "Selected ABCR railway, SCADA, pipeline and infrastructure projects across India.",
+  },
 };
 
 const images = [
