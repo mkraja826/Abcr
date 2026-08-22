@@ -6,6 +6,12 @@ import { contact } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Careers | ABCR Infra Projects",
   description: "Careers and opportunities at ABCR Infra Projects Pvt. Ltd.",
+  alternates: { canonical: "/careers" },
+  openGraph: {
+    url: "/careers",
+    title: "Careers | ABCR Infra Projects",
+    description: "Careers and opportunities at ABCR Infra Projects Pvt. Ltd.",
+  },
 };
 
 export default function CareersPage() {
