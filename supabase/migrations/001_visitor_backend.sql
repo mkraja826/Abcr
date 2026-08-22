@@ -10,13 +10,14 @@ create table if not exists public.visitor_events (
   language text,
   screen text,
   user_agent text,
-  ip_address text,
+  country text check (country is null or country ~ '^[A-Z]{2}$'),
   created_at timestamptz not null default now()
 );
 
 create index if not exists visitor_events_created_at_idx on public.visitor_events (created_at desc);
 create index if not exists visitor_events_session_id_idx on public.visitor_events (session_id);
 create index if not exists visitor_events_path_idx on public.visitor_events (path);
+create index if not exists visitor_events_country_idx on public.visitor_events (country);
 
 create table if not exists public.enquiries (
   id uuid primary key default gen_random_uuid(),
@@ -38,3 +39,4 @@ alter table public.enquiries enable row level security;
 
 -- No public insert policies are required because the website API writes server-side using the service role.
 -- This keeps database credentials and direct table access away from site visitors.
+-- Raw visitor IP addresses are intentionally not stored by this schema.
