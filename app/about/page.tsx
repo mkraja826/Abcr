@@ -38,6 +38,16 @@ export default function AboutPage() {
         <article><span>03</span><p className="eyebrow">Approach</p><h3>Responsible infrastructure.</h3><p>Quality, transparency, innovation and environment-conscious execution guide the way we approach projects and partnerships.</p></article>
       </section>
 
+      <section className="content-split section">
+        <div><p className="eyebrow">Corporate identity</p><h2>Clear legal<br /><span>company information.</span></h2></div>
+        <div className="rich-copy">
+          <p><strong>Legal name:</strong> {company.legalName}</p>
+          <p><strong>Incorporated:</strong> {company.incorporated}</p>
+          <p><strong>Corporate Identification Number (CIN):</strong> {company.cin}</p>
+          <p><strong>Registered office:</strong> {company.registeredAddress}</p>
+        </div>
+      </section>
+
       <section className="section leadership-section">
         <div className="section-heading"><div><p className="eyebrow">Leadership</p><h2>People guiding<br /><span>our progress.</span></h2></div><p>Leadership focused on execution, sustainable growth and long-term client relationships.</p></div>
         <div className="leadership-grid">
