@@ -20,6 +20,7 @@ export default function EnquiryForm() {
           email: data.get("email"),
           phone: data.get("phone"),
           message: data.get("message"),
+          companyWebsite: data.get("companyWebsite"),
           sourcePath: window.location.pathname,
         }),
       });
@@ -43,10 +44,16 @@ export default function EnquiryForm() {
 
   return (
     <form className="enquiry-form" onSubmit={submit}>
+      <div className="form-honeypot" aria-hidden="true">
+        <label>
+          Website
+          <input name="companyWebsite" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <div className="form-grid">
         <label>
           <span>Name</span>
-          <input name="name" required maxLength={120} autoComplete="name" />
+          <input name="name" required minLength={2} maxLength={120} autoComplete="name" />
         </label>
         <label>
           <span>Email</span>
