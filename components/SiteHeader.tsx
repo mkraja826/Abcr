@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+const navItems = [
+  ["About", "/about"],
+  ["Services", "/services"],
+  ["Projects", "/projects"],
+  ["Careers", "/careers"],
+  ["Contact", "/contact"],
+] as const;
+
 export default function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
     <header className={`site-header${solid ? " solid-header" : ""}`}>
@@ -7,14 +15,20 @@ export default function SiteHeader({ solid = false }: { solid?: boolean }) {
         <span className="brand-mark">A</span>
         <span>ABCR</span>
       </Link>
+
       <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href="/about">About</Link>
-        <Link href="/services">Services</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/careers">Careers</Link>
-        <Link href="/contact">Contact</Link>
+        {navItems.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
       </nav>
-      <Link className="header-cta" href="/contact">Enquire <span>↗</span></Link>
+
+      <div className="header-actions">
+        <Link className="header-cta" href="/contact">Enquire <span>↗</span></Link>
+        <details className="mobile-menu">
+          <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+          <nav aria-label="Mobile navigation">
+            {navItems.map(([label, href]) => <Link key={href} href={href}>{label}<span>→</span></Link>)}
+          </nav>
+        </details>
+      </div>
     </header>
   );
 }
