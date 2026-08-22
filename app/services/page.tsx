@@ -6,6 +6,12 @@ import { services } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Services | ABCR Infra Projects",
   description: "Explore ABCR capabilities across railways, SCADA, EPC, water, buildings and infrastructure consultancy.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    url: "/services",
+    title: "Infrastructure Services | ABCR Infra Projects",
+    description: "Explore ABCR capabilities across railways, SCADA, EPC, water, buildings and infrastructure consultancy.",
+  },
 };
 
 export default function ServicesPage() {
