@@ -6,10 +6,7 @@ import VisitorTracker from "@/components/VisitorTracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abcr.co.in"),
-  title: {
-    default: "ABCR Infra Projects Pvt. Ltd. | Infrastructure & Engineering",
-    template: "%s | ABCR Infra Projects",
-  },
+  title: "ABCR Infra Projects Pvt. Ltd. | Infrastructure & Engineering",
   description: "ABCR delivers infrastructure solutions across railways, EPC, SCADA, water systems, buildings and technical consultancy in India.",
   openGraph: {
     type: "website",
