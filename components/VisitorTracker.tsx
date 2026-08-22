@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const SESSION_KEY = "abcr_session_id";
 
@@ -14,10 +15,12 @@ function getSessionId() {
 }
 
 export default function VisitorTracker() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const payload = {
       sessionId: getSessionId(),
-      path: window.location.pathname,
+      path: pathname || "/",
       referrer: document.referrer || null,
       language: navigator.language,
       screen: `${window.screen.width}x${window.screen.height}`,
@@ -29,7 +32,7 @@ export default function VisitorTracker() {
       body: JSON.stringify(payload),
       keepalive: true,
     }).catch(() => undefined);
-  }, []);
+  }, [pathname]);
 
   return null;
 }
