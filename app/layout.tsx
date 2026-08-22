@@ -3,6 +3,7 @@ import "./globals.css";
 import "./enquiry.css";
 import "./interior.css";
 import "./accessibility.css";
+import "./project-detail.css";
 import VisitorTracker from "@/components/VisitorTracker";
 import { company, contact } from "@/lib/site-data";
 
