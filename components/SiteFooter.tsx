@@ -18,6 +18,7 @@ export default function SiteFooter() {
           <Link href="/services">Services</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/careers">Careers</Link>
+          <Link href="/privacy">Privacy</Link>
         </div>
         <div className="footer-links">
           <strong>Contact</strong>
