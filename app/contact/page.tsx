@@ -7,6 +7,12 @@ import { contact } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact | ABCR Infra Projects",
   description: "Contact ABCR Infra Projects Pvt. Ltd. for infrastructure, project and partnership enquiries.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    url: "/contact",
+    title: "Contact ABCR Infra Projects",
+    description: "Contact ABCR Infra Projects Pvt. Ltd. for infrastructure, project and partnership enquiries.",
+  },
 };
 
 export default function ContactPage() {
