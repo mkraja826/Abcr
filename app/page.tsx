@@ -1,3 +1,5 @@
+import EnquiryForm from "@/components/EnquiryForm";
+
 const sectors = [
   { number: "01", title: "Water & Environment", text: "Integrated water infrastructure, treatment and distribution systems engineered for reliability." },
   { number: "02", title: "Roads & Urban Infrastructure", text: "Transport corridors and urban infrastructure designed for safer, faster and more connected communities." },
@@ -61,7 +63,8 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <div><p className="eyebrow light">Start a conversation</p><h2>Building something<br />that matters?</h2></div><div><p>Talk to ABCR about your next infrastructure requirement, partnership or opportunity.</p><a className="button white" href="mailto:info@abcr.example">Contact ABCR <span>↗</span></a></div>
+        <div><p className="eyebrow light">Start a conversation</p><h2>Building something<br />that matters?</h2><p className="contact-intro">Talk to ABCR about your next infrastructure requirement, partnership or opportunity.</p></div>
+        <EnquiryForm />
       </section>
 
       <footer><a className="brand footer-brand" href="#top"><span className="brand-mark">A</span><span>ABCR</span></a><p>Infrastructure & Engineering</p><p>© 2026 ABCR. All rights reserved.</p></footer>
