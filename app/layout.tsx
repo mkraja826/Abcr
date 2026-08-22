@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./enquiry.css";
+import "./interior.css";
 import VisitorTracker from "@/components/VisitorTracker";
 
 export const metadata: Metadata = {
-  title: "ABCR | Infrastructure & Engineering",
-  description: "ABCR delivers dependable engineering and infrastructure solutions built for long-term impact.",
+  title: "ABCR Infra Projects Pvt. Ltd. | Infrastructure & Engineering",
+  description: "ABCR delivers infrastructure solutions across railways, EPC, SCADA, water systems, buildings and technical consultancy in India.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
