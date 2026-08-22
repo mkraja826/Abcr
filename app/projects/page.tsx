@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/lib/site-data";
@@ -36,13 +37,14 @@ export default function ProjectsPage() {
 
       <section className="portfolio-grid section">
         {projects.map((project, index) => (
-          <article className="portfolio-card" key={project.title}>
+          <Link className="portfolio-card" href={`/projects/${project.slug}`} key={project.title}>
             <div className="portfolio-image" style={{ backgroundImage: `linear-gradient(180deg, transparent 45%, rgba(4,16,26,.78)), url(${images[index]})` }}>
               <span>0{index + 1}</span>
+              <small>Representative image</small>
             </div>
             <div className="portfolio-meta"><p>{project.sector}</p><span>{project.region}</span></div>
-            <h2>{project.title}</h2>
-          </article>
+            <div className="portfolio-title-row"><h2>{project.title}</h2><b>↗</b></div>
+          </Link>
         ))}
       </section>
       <SiteFooter />
