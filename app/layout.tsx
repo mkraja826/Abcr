@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     template: "%s | ABCR Infra Projects",
   },
   description: "ABCR delivers infrastructure solutions across railways, EPC, SCADA, water systems, buildings and technical consultancy in India.",
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_IN",
