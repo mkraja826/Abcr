@@ -53,7 +53,13 @@ export default function Home() {
       <section className="projects" id="projects">
         <div className="projects-head"><div><p className="eyebrow light">Selected work</p><h2>Projects across<br />essential infrastructure.</h2></div><Link href="/projects">View all projects <span>→</span></Link></div>
         <div className="project-grid">
-          {featuredProjects.map((project, index) => <article className="project-card" key={project.title} style={{ backgroundImage: `linear-gradient(180deg, transparent 30%, rgba(4,16,26,.9) 100%), url(${projectImages[index]})` }}><span>0{index + 1}</span><div><p>{project.sector}</p><h3>{project.title}</h3></div></article>)}
+          {featuredProjects.map((project, index) => (
+            <Link className="project-card" href={`/projects/${project.slug}`} key={project.title} style={{ backgroundImage: `linear-gradient(180deg, transparent 30%, rgba(4,16,26,.9) 100%), url(${projectImages[index]})` }}>
+              <span>0{index + 1}</span>
+              <small>Representative image</small>
+              <div><p>{project.sector}</p><h3>{project.title}</h3></div>
+            </Link>
+          ))}
         </div>
       </section>
 
