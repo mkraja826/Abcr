@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./enquiry.css";
 import VisitorTracker from "@/components/VisitorTracker";
 
 export const metadata: Metadata = {
