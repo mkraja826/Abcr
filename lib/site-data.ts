@@ -68,13 +68,55 @@ export const services = [
 ];
 
 export const projects = [
-  { title: "WCR – Tughlakabad Railway Project", sector: "Railway Infrastructure", region: "India" },
-  { title: "WCR – TKD", sector: "Railway Infrastructure", region: "India" },
-  { title: "MS Pipeline Project", sector: "Water & Pipelines", region: "India" },
-  { title: "SCR TMX DPW3", sector: "Railway Infrastructure", region: "India" },
-  { title: "SCADA Projects", sector: "SCADA & Automation", region: "India" },
-  { title: "NWR – Jodhpur", sector: "Railway Infrastructure", region: "Rajasthan" },
-  { title: "DI Laying Project", sector: "Water & Pipelines", region: "India" },
+  {
+    slug: "wcr-tughlakabad-railway-project",
+    title: "WCR – Tughlakabad Railway Project",
+    sector: "Railway Infrastructure",
+    region: "India",
+    summary: "A railway infrastructure assignment presented in ABCR's public project portfolio under its railway delivery capabilities.",
+  },
+  {
+    slug: "wcr-tkd",
+    title: "WCR – TKD",
+    sector: "Railway Infrastructure",
+    region: "India",
+    summary: "A WCR railway assignment publicly listed by ABCR as part of its railway infrastructure project portfolio.",
+  },
+  {
+    slug: "ms-pipeline-project",
+    title: "MS Pipeline Project",
+    sector: "Water & Pipelines",
+    region: "India",
+    summary: "A mild-steel pipeline infrastructure project presented in ABCR's public portfolio within its water and pipeline capabilities.",
+  },
+  {
+    slug: "scr-tmx-dpw3",
+    title: "SCR TMX DPW3",
+    sector: "Railway Infrastructure",
+    region: "India",
+    summary: "A South Central Railway-related project publicly listed by ABCR within its railway infrastructure portfolio.",
+  },
+  {
+    slug: "scada-projects",
+    title: "SCADA Projects",
+    sector: "SCADA & Automation",
+    region: "India",
+    summary: "SCADA and automation work presented by ABCR as part of its electrical infrastructure and control-system capabilities.",
+  },
+  {
+    slug: "nwr-jodhpur",
+    title: "NWR – Jodhpur",
+    sector: "Railway Infrastructure",
+    region: "Rajasthan",
+    summary: "A North Western Railway-related assignment in Jodhpur publicly listed in ABCR's railway infrastructure portfolio.",
+  },
+  {
+    slug: "di-laying-project",
+    title: "DI Laying Project",
+    sector: "Water & Pipelines",
+    region: "India",
+    summary: "A ductile-iron pipeline laying project presented in ABCR's public water and pipeline infrastructure portfolio.",
+  },
 ];
 
 export const leadership = [
