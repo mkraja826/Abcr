@@ -8,6 +8,10 @@ export const company = {
     "To deliver quality, transparent and innovative infrastructure solutions through disciplined engineering and execution.",
   vision:
     "To contribute to modern, sustainable infrastructure across India while creating long-term value for clients and communities.",
+  incorporated: "16 January 2024",
+  cin: "U46632AP2024PTC113576",
+  registeredAddress:
+    "24-101-20-37, Saibaba Temple area, Near Renuka Yellamma Temple, Proddatur, Cuddapah, Andhra Pradesh 516360, India",
 };
 
 export const services = [
@@ -87,14 +91,14 @@ export const projects = [
     title: "MS Pipeline Project",
     sector: "Water & Pipelines",
     region: "India",
-    summary: "A mild-steel pipeline infrastructure project presented in ABCR's public portfolio within its water and pipeline capabilities.",
+    summary: "An MS pipeline infrastructure project presented in ABCR's public portfolio within its water and pipeline capabilities.",
   },
   {
     slug: "scr-tmx-dpw3",
     title: "SCR TMX DPW3",
     sector: "Railway Infrastructure",
     region: "India",
-    summary: "A South Central Railway-related project publicly listed by ABCR within its railway infrastructure portfolio.",
+    summary: "An SCR-related project publicly listed by ABCR within its railway infrastructure portfolio.",
   },
   {
     slug: "scada-projects",
@@ -108,14 +112,14 @@ export const projects = [
     title: "NWR – Jodhpur",
     sector: "Railway Infrastructure",
     region: "Rajasthan",
-    summary: "A North Western Railway-related assignment in Jodhpur publicly listed in ABCR's railway infrastructure portfolio.",
+    summary: "An NWR-related assignment in Jodhpur publicly listed in ABCR's railway infrastructure portfolio.",
   },
   {
     slug: "di-laying-project",
     title: "DI Laying Project",
     sector: "Water & Pipelines",
     region: "India",
-    summary: "A ductile-iron pipeline laying project presented in ABCR's public water and pipeline infrastructure portfolio.",
+    summary: "A DI laying project presented in ABCR's public water and pipeline infrastructure portfolio.",
   },
 ];
 
@@ -133,7 +137,7 @@ export const contact = {
     "abcrinfraprojects@outlook.com",
   ],
   offices: [
-    { label: "Registered Head Office", location: "Andhra Pradesh, India" },
+    { label: "Registered Head Office", location: company.registeredAddress },
     { label: "Branch Office", location: "Rajasthan, India" },
   ],
 };
