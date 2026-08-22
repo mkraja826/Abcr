@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./enquiry.css";
 import "./interior.css";
+import "./accessibility.css";
 import VisitorTracker from "@/components/VisitorTracker";
 import { company, contact } from "@/lib/site-data";
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://abcr.co.in"),
   title: "ABCR Infra Projects Pvt. Ltd. | Infrastructure & Engineering",
   description: "ABCR delivers infrastructure solutions across railways, EPC, SCADA, water systems, buildings and technical consultancy in India.",
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
