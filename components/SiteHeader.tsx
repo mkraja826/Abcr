@@ -8,7 +8,7 @@ const navItems = [
   ["Contact", "/contact"],
 ] as const;
 
-const logoSrc = "https://drive.google.com/uc?export=view&id=1Z6ibCqErFOHQ2FUxqGlEv262CdqJbDsA";
+const logoSrc = "/abcr-logo.webp";
 
 export default function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
