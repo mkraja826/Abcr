@@ -5,6 +5,7 @@ import "./interior.css";
 import "./accessibility.css";
 import "./project-detail.css";
 import "./brand.css";
+import "./mobile-polish.css";
 import VisitorTracker from "@/components/VisitorTracker";
 import { company, contact } from "@/lib/site-data";
 
