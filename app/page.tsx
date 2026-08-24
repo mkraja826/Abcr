@@ -4,12 +4,6 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { company, projects, services } from "@/lib/site-data";
 
-const projectImages = [
-  "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85",
-];
-
 export default function Home() {
   const featuredProjects = [projects[0], projects[4], projects[2]];
 
@@ -54,9 +48,9 @@ export default function Home() {
         <div className="projects-head"><div><p className="eyebrow light">Selected work</p><h2>Projects across<br />essential infrastructure.</h2></div><Link href="/projects">View all projects <span>→</span></Link></div>
         <div className="project-grid">
           {featuredProjects.map((project, index) => (
-            <Link className="project-card" href={`/projects/${project.slug}`} key={project.title} style={{ backgroundImage: `linear-gradient(180deg, transparent 30%, rgba(4,16,26,.9) 100%), url(${projectImages[index]})` }}>
+            <Link className="project-card" href={`/projects/${project.slug}`} key={project.title} style={{ backgroundImage: `linear-gradient(180deg, transparent 30%, rgba(4,16,26,.9) 100%), url(${project.image})` }}>
               <span>0{index + 1}</span>
-              <small>Representative image</small>
+              <small>ABCR site photograph</small>
               <div><p>{project.sector}</p><h3>{project.title}</h3></div>
             </Link>
           ))}
@@ -64,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="strength section" id="strength">
-        <div className="strength-image" role="img" aria-label="Infrastructure engineering and construction" />
+        <div className="strength-image" role="img" aria-label="ABCR infrastructure engineering and construction site" />
         <div className="strength-copy"><p className="eyebrow">How we deliver</p><h2>From engineering<br /><span>to execution.</span></h2><p>ABCR&apos;s infrastructure approach brings together planning, engineering, procurement, construction, electrical systems, quality controls and commissioning support according to project requirements.</p><ul><li><span>01</span>Engineering & planning</li><li><span>02</span>Procurement & coordination</li><li><span>03</span>Quality-focused execution</li><li><span>04</span>Testing & commissioning support</li></ul></div>
       </section>
 
