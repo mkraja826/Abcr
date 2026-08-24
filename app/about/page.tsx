@@ -51,7 +51,14 @@ export default function AboutPage() {
       <section className="section leadership-section">
         <div className="section-heading"><div><p className="eyebrow">Leadership</p><h2>People guiding<br /><span>our progress.</span></h2></div><p>Leadership focused on execution, sustainable growth and long-term client relationships.</p></div>
         <div className="leadership-grid">
-          {leadership.map((person, index) => <article key={person.name}><span>0{index + 1}</span><div className="leader-avatar">{person.name.charAt(0)}</div><h3>{person.name}</h3><p>{person.role}</p></article>)}
+          {leadership.map((person, index) => (
+            <article key={person.name}>
+              <span>0{index + 1}</span>
+              <div className="leader-avatar leader-photo" style={{ backgroundImage: `url(${person.image})` }} role="img" aria-label={person.name} />
+              <h3>{person.name}</h3>
+              <p>{person.role}</p>
+            </article>
+          ))}
         </div>
       </section>
       <SiteFooter />
