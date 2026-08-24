@@ -1,0 +1,8 @@
+.hero{background-image:url("https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_2200/v1787567595/abcr/projects/pipeline-crane-installation.jpg");background-size:cover;background-position:center 54%}
+.strength-image{background-image:url("https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1600/v1787567551/abcr/projects/scada-switchgear-room.jpg");background-size:cover;background-position:center}
+.leader-photo{background-size:cover;background-position:center top;background-repeat:no-repeat;color:transparent}
+.leadership-grid article:first-child .leader-photo{background-position:center 18%}
+.leadership-grid article:nth-child(2) .leader-photo{background-position:center 18%}
+.leadership-grid article:nth-child(3) .leader-photo{background-position:center center}
+.portfolio-image,.project-card{background-size:cover;background-position:center}
+@media(max-width:700px){.hero{background-position:61% center}.strength-image{background-position:56% center}.leader-photo{min-height:300px}}
