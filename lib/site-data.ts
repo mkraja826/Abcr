@@ -71,12 +71,21 @@ export const services = [
   },
 ];
 
+const clientPhotos = {
+  electricalField: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1800/v1787567539/abcr/projects/site-electrical-field.jpg",
+  scadaRoom: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1800/v1787567551/abcr/projects/scada-switchgear-room.jpg",
+  pipelineTrench: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1800/v1787567564/abcr/projects/pipeline-trench.jpg",
+  pipelineLowering: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1800/v1787567583/abcr/projects/pipeline-lowering.jpg",
+  pipelineCrane: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_1800/v1787567595/abcr/projects/pipeline-crane-installation.jpg",
+};
+
 export const projects = [
   {
     slug: "wcr-tughlakabad-railway-project",
     title: "WCR – Tughlakabad Railway Project",
     sector: "Railway Infrastructure",
     region: "India",
+    image: clientPhotos.electricalField,
     summary: "A railway infrastructure assignment presented in ABCR's public project portfolio under its railway delivery capabilities.",
   },
   {
@@ -84,6 +93,7 @@ export const projects = [
     title: "WCR – TKD",
     sector: "Railway Infrastructure",
     region: "India",
+    image: clientPhotos.electricalField,
     summary: "A WCR railway assignment publicly listed by ABCR as part of its railway infrastructure project portfolio.",
   },
   {
@@ -91,6 +101,7 @@ export const projects = [
     title: "MS Pipeline Project",
     sector: "Water & Pipelines",
     region: "India",
+    image: clientPhotos.pipelineCrane,
     summary: "An MS pipeline infrastructure project presented in ABCR's public portfolio within its water and pipeline capabilities.",
   },
   {
@@ -98,6 +109,7 @@ export const projects = [
     title: "SCR TMX DPW3",
     sector: "Railway Infrastructure",
     region: "India",
+    image: clientPhotos.electricalField,
     summary: "An SCR-related project publicly listed by ABCR within its railway infrastructure portfolio.",
   },
   {
@@ -105,6 +117,7 @@ export const projects = [
     title: "SCADA Projects",
     sector: "SCADA & Automation",
     region: "India",
+    image: clientPhotos.scadaRoom,
     summary: "SCADA and automation work presented by ABCR as part of its electrical infrastructure and control-system capabilities.",
   },
   {
@@ -112,6 +125,7 @@ export const projects = [
     title: "NWR – Jodhpur",
     sector: "Railway Infrastructure",
     region: "Rajasthan",
+    image: clientPhotos.electricalField,
     summary: "An NWR-related assignment in Jodhpur publicly listed in ABCR's railway infrastructure portfolio.",
   },
   {
@@ -119,14 +133,27 @@ export const projects = [
     title: "DI Laying Project",
     sector: "Water & Pipelines",
     region: "India",
+    image: clientPhotos.pipelineTrench,
     summary: "A DI laying project presented in ABCR's public water and pipeline infrastructure portfolio.",
   },
 ];
 
 export const leadership = [
-  { name: "Nagarjuna Reddy M", role: "Founder & Managing Director" },
-  { name: "Bharathi M", role: "Director" },
-  { name: "Raghunath Reddy", role: "Chief Executive Officer" },
+  {
+    name: "Nagarjuna Reddy M",
+    role: "Founder & Managing Director",
+    image: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_900/v1787567614/abcr/leadership/nagarjuna-reddy-m.jpg",
+  },
+  {
+    name: "Bharathi M",
+    role: "Director",
+    image: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_900/v1787567627/abcr/leadership/bharathi-m.jpg",
+  },
+  {
+    name: "Raghunath Reddy",
+    role: "Chief Executive Officer",
+    image: "https://res.cloudinary.com/dkt1vl8gy/image/upload/f_auto,q_auto,w_900/v1787567640/abcr/leadership/raghunath-reddy.jpg",
+  },
 ];
 
 export const contact = {
