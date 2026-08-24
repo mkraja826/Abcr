@@ -15,16 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-const images = [
-  "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1400&q=85",
-  "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1400&q=85",
-];
-
 export default function ProjectsPage() {
   return (
     <main>
@@ -38,9 +28,9 @@ export default function ProjectsPage() {
       <section className="portfolio-grid section">
         {projects.map((project, index) => (
           <Link className="portfolio-card" href={`/projects/${project.slug}`} key={project.title}>
-            <div className="portfolio-image" style={{ backgroundImage: `linear-gradient(180deg, transparent 45%, rgba(4,16,26,.78)), url(${images[index]})` }}>
+            <div className="portfolio-image" style={{ backgroundImage: `linear-gradient(180deg, transparent 45%, rgba(3,21,34,.8)), url(${project.image})` }}>
               <span>0{index + 1}</span>
-              <small>Representative image</small>
+              <small>ABCR site photograph</small>
             </div>
             <div className="portfolio-meta"><p>{project.sector}</p><span>{project.region}</span></div>
             <div className="portfolio-title-row"><h2>{project.title}</h2><b>↗</b></div>
