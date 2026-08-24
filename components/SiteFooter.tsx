@@ -7,11 +7,13 @@ export default function SiteFooter() {
       <div className="footer-main">
         <div>
           <Link className="footer-logo-link" href="/" aria-label="ABCR Infra Projects Pvt. Ltd. home">
-            <img
-              className="footer-logo"
-              src="/abcr-logo-footer.svg"
-              alt="ABCR Infra Projects Pvt. Ltd."
-            />
+            <span className="footer-logo-frame">
+              <img
+                className="footer-logo"
+                src="/abcr-logo-clean.webp"
+                alt="ABCR Infra Projects Pvt. Ltd."
+              />
+            </span>
           </Link>
           <p className="footer-kicker">ABCR Infra Projects Pvt. Ltd.</p>
           <p className="footer-copy">Infrastructure development across railways, EPC, SCADA, water systems and civil works.</p>
