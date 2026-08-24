@@ -1,23 +1,25 @@
 @media (max-width: 700px) {
   .site-header {
-    height: 74px;
-    padding: 0 20px;
+    height: 76px;
+    padding: 0 18px;
   }
 
   .brand {
-    width: 158px;
-    height: 48px;
-    overflow: hidden;
-    align-items: flex-start;
+    width: 176px;
+    height: 60px;
+    overflow: visible;
+    align-items: center;
   }
 
   .brand-logo {
-    width: 158px;
-    height: auto;
-    max-width: none;
-    object-fit: initial;
+    display: block;
+    width: 176px;
+    height: 60px;
+    max-width: 176px;
+    object-fit: contain;
+    object-position: left center;
     image-rendering: auto;
-    transform: translateY(-1px);
+    transform: none;
   }
 
   .mobile-menu summary {
@@ -32,7 +34,7 @@
   }
 
   .hero {
-    min-height: calc(100svh - 74px);
+    min-height: calc(100svh - 76px);
     height: auto;
     padding: 138px 24px 52px;
     display: flex;
@@ -109,12 +111,10 @@
     padding-right: 16px;
   }
 
-  .brand {
-    width: 148px;
-  }
-
+  .brand,
   .brand-logo {
-    width: 148px;
+    width: 160px;
+    max-width: 160px;
   }
 
   .hero {
