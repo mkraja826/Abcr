@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from "react";
 
+const contactEmail = "abcrinfraprojects@gmail.com";
+
 export default function EnquiryForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "offline" | "error">("idle");
 
@@ -42,8 +44,14 @@ export default function EnquiryForm() {
     }
   }
 
+  const fallbackMessage = (
+    <>
+      Please email us directly at <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+    </>
+  );
+
   return (
-    <form className="enquiry-form" onSubmit={submit}>
+    <form className="enquiry-form" onSubmit={submit} noValidate={false}>
       <div className="form-honeypot" aria-hidden="true">
         <label>
           Website
@@ -57,11 +65,11 @@ export default function EnquiryForm() {
         </label>
         <label>
           <span>Email</span>
-          <input name="email" type="email" required maxLength={250} autoComplete="email" />
+          <input name="email" type="email" required maxLength={250} autoComplete="email" inputMode="email" />
         </label>
         <label>
           <span>Phone</span>
-          <input name="phone" maxLength={40} autoComplete="tel" />
+          <input name="phone" type="tel" maxLength={40} autoComplete="tel" inputMode="tel" />
         </label>
         <label className="message-field">
           <span>Tell us about your requirement</span>
@@ -69,13 +77,13 @@ export default function EnquiryForm() {
         </label>
       </div>
       <div className="form-footer">
-        <button className="button white" type="submit" disabled={status === "sending"}>
+        <button className="button white" type="submit" disabled={status === "sending"} aria-busy={status === "sending"}>
           {status === "sending" ? "Sending…" : "Send enquiry"} <span>↗</span>
         </button>
         <p aria-live="polite">
-          {status === "sent" && "Thank you. Your enquiry has been received."}
-          {status === "offline" && "Online enquiry storage is ready but not connected yet."}
-          {status === "error" && "We could not submit this enquiry. Please try again."}
+          {status === "sent" && "Thank you. Your enquiry has been received. Our team will get back to you."}
+          {status === "offline" && fallbackMessage}
+          {status === "error" && <>We could not submit this enquiry right now. {fallbackMessage}</>}
         </p>
       </div>
     </form>
