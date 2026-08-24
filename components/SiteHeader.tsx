@@ -8,12 +8,17 @@ const navItems = [
   ["Contact", "/contact"],
 ] as const;
 
+const logoSrc = "https://drive.google.com/uc?export=view&id=1Z6ibCqErFOHQ2FUxqGlEv262CdqJbDsA";
+
 export default function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
     <header className={`site-header${solid ? " solid-header" : ""}`}>
-      <Link className="brand" href="/" aria-label="ABCR home">
-        <span className="brand-mark">A</span>
-        <span>ABCR</span>
+      <Link className="brand" href="/" aria-label="ABCR Infra Projects Pvt. Ltd. home">
+        <img
+          className="brand-logo"
+          src={logoSrc}
+          alt="ABCR Infra Projects Pvt. Ltd."
+        />
       </Link>
 
       <nav className="desktop-nav" aria-label="Main navigation">
