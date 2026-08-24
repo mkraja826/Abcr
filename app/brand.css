@@ -12,3 +12,17 @@ body{background:var(--abcr-surface);color:var(--abcr-ink);font-family:var(--font
 .error-state{min-height:100vh;display:grid;place-items:center;padding:8vw;background:linear-gradient(135deg,#f7f9fb 0%,#eef3f7 100%)}.error-state section{max-width:720px}.error-state h1{font-family:var(--font-industrial);font-size:clamp(48px,7vw,88px);line-height:.95;letter-spacing:-.04em;margin:0 0 24px}.error-state section>p:not(.eyebrow){max-width:580px;color:var(--abcr-muted);font-size:17px;line-height:1.7}.error-actions{display:flex;align-items:center;gap:28px;margin-top:34px}.error-actions button{border:0;cursor:pointer}
 @media(max-width:900px){.site-header{height:78px;padding:0 5vw}.brand-logo{height:43px;max-width:188px}.section{padding-top:92px;padding-bottom:92px}.hero{padding-top:78px;min-height:760px}.header-cta{padding:11px 14px}.strength-image{box-shadow:13px 13px 0 rgba(4,74,155,.07)}.footer-logo{width:168px}.project-card{min-height:430px}}
 @media(max-width:540px){.site-header{height:72px}.brand-logo{height:38px;max-width:164px}.hero{min-height:720px;height:auto;padding-bottom:52px}.hero h1{font-size:clamp(42px,11.2vw,54px);line-height:.93;letter-spacing:-.045em}.hero-copy{font-size:15px;line-height:1.65}.button{padding:16px 18px}.section h2,.projects h2,.contact h2{font-size:42px;letter-spacing:-.035em}.section{padding-top:78px;padding-bottom:78px}.projects{padding-top:82px;padding-bottom:82px}.stats strong{font-size:38px}.sector{padding:28px 0}.sector h3{font-size:24px}.error-actions{align-items:flex-start;flex-direction:column}.footer-logo{width:148px}}
+
+/* Cinematic hero built from authentic ABCR project photography */
+.hero-cinematic{background:#031522;overflow:hidden}
+.hero-motion{position:absolute;inset:0;z-index:0;overflow:hidden;background:#031522}
+.hero-motion-frame{position:absolute;inset:-4%;background-size:cover;background-position:center;opacity:0;will-change:transform,opacity;animation:abcrHeroFilm 24s infinite linear}
+.hero-motion-frame-1{animation-delay:0s}
+.hero-motion-frame-2{animation-delay:6s}
+.hero-motion-frame-3{animation-delay:12s}
+.hero-motion-frame-4{animation-delay:18s}
+.hero-cinematic .hero-overlay{z-index:1;background:linear-gradient(90deg,rgba(3,21,34,.94) 0%,rgba(3,21,34,.82) 37%,rgba(3,21,34,.46) 72%,rgba(3,21,34,.28) 100%)}
+.hero-cinematic .hero-content,.hero-cinematic .hero-index{z-index:2}
+@keyframes abcrHeroFilm{0%{opacity:0;transform:scale(1.04) translate3d(0,0,0)}4%{opacity:1}22%{opacity:1}27%{opacity:0;transform:scale(1.13) translate3d(-1.5%,-1%,0)}100%{opacity:0;transform:scale(1.13) translate3d(-1.5%,-1%,0)}}
+@media(max-width:540px){.hero-motion-frame{inset:-3%;background-position:center center}.hero-motion-frame-1{background-position:56% center}.hero-motion-frame-2{background-position:50% center}.hero-motion-frame-3{background-position:58% center}.hero-motion-frame-4{background-position:52% center}.hero-cinematic .hero-overlay{background:linear-gradient(180deg,rgba(3,21,34,.55) 0%,rgba(3,21,34,.77) 35%,rgba(3,21,34,.93) 100%)}}
+@media(prefers-reduced-motion:reduce){.hero-motion-frame{animation:none;opacity:0;transform:none}.hero-motion-frame:first-child{opacity:1}}
