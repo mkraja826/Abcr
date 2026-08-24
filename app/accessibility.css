@@ -1,6 +1,6 @@
 .form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 
-:focus-visible{outline:3px solid #e4572e;outline-offset:3px}
+:focus-visible{outline:3px solid #044a9b;outline-offset:3px}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto!important}
