@@ -8,7 +8,7 @@ const navItems = [
   ["Contact", "/contact"],
 ] as const;
 
-const logoSrc = "/abcr-logo.webp";
+const logoSrc = "/abcr-logo-clean.webp";
 
 export default function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
